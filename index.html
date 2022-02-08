@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Library</title>
+</head>
+<body>
+    <div class="header"><h1>Library</h1></div>
+    <div class="container" id="container">
+ 
+
+   </div>
+    <div class="formula">
+        <form id="formBook">
+            <label for="title"><h2>Title:</h2></label>
+            <input type="text" id="title" name="title" required>
+        
+            <label for="author"><p>author:</p></label>
+            <input type="text" name="author" id="author">
+        
+            <label for="pages"><p>pages:</p></label>
+            <input type="number" name="pages" id="pages" required>
+        
+            <label for="isRead"><p>Is read?</p></label>
+            <input type="checkbox" name="isRead" id="isRead">
+            <button type="submit" class="save" id="saveBook" >Save</button>
+        </form>
+    </div>
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

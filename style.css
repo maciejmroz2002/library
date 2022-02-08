@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #523a28;
+}
+
+body {
+  background-color: #e4d4c8;
+}
+
+.header {
+  background-color: #523a28;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+h1 {
+  color: #e4d4c8;
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 20px;
+}
+
+.book {
+  background-color: #d0b49f;
+  height: 200px;
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a47551;
+}
+
+.info {
+  padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.buttons {
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.delete,
+.change-status,
+.save {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #a47551;
+
+  height: 35px;
+}
+
+.delete {
+  max-width: 80px;
+  flex-grow: 1;
+}
+
+.change-status {
+  max-width: 180px;
+  flex-grow: 1;
+}
+
+button:active {
+  background-color: #a47551;
+  color: #000;
+}
+
+.formula {
+  display: grid;
+  gap: 10px;
+  background-color: #a47551;
+  padding: 10px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 80px minmax(100px, 1fr);
+  gap: 10px;
+}
+
+.save {
+  grid-column: 1 / -1;
+  background-color: #523a28;
+  color: #e4d4c8;
+}
+
+.save:active {
+  background-color: #a47551;
+}
+
+label {
+  text-align: end;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 2px solid #523a28;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  font-weight: 600;
+  padding-left: 5px;
+}
+
+.done {
+  color: green;
+}
+
+.book,
+.title,
+button,
+.formula {
+  border-radius: 10px;
+}
+
+/* input[type="checkbox"] {
+  font: 1rem;
+  width: 1.3rem;
+  height: 1.3rem;
+} */
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: #a47551;
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.9em;
+  height: 0.9em;
+  border-radius: 0.1em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+  background-color: green;
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
